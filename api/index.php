@@ -2,7 +2,7 @@
 
 $botToken = '7216903142:AAHFi2d9vVOmUa3lWLBWPfVzt6t4W3AU5Rw';
 $apiUrl = "https://api.telegram.org/bot$botToken/";
-$webhookUrl = 'https://codethemes.vercel.app';
+$webhookUrl = 'https://codethemesx.000webhostapp.com/bot.php'; // Substitua pelo seu domínio e caminho do arquivo PHP
 
 function sendMessage($chatId, $message) {
     global $apiUrl;
@@ -39,7 +39,7 @@ if (isset($updateArray['message'])) {
             'page' => 'test',
             'columnID' => 'SN',
             'search' => $sn,
-            'user' => 'example_user',
+            'user' => 'pedro',
             'date' => date('Y-m-d H:i:s'),
             'url' => 'https://docs.google.com/spreadsheets/d/1tsw-O6LJ-NC3nQ4rlrQcpUUnRGBG6M3dkYQ6XPK4IXg/edit?'
         ];
@@ -54,7 +54,6 @@ if (isset($updateArray['message'])) {
 
         $context  = stream_context_create($options);
 
-        // Faz a requisição POST e obtém a resposta
         $result = file_get_contents($url, false, $context);
 
         if ($result === FALSE) {
